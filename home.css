@@ -1,0 +1,542 @@
+@font-face{
+    font-family: 'G';
+   src: url(./Gilroy-Medium.ttf);
+}
+@font-face{
+   font-family: "light";
+   src: url(./Gilroy-Light.otf);
+}
+@font-face{
+    font-family: 'bold';
+    src: url(./Gilroy-ExtraBold.otf);
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"G";
+}
+*::selection{
+    color: white;
+    background-color: black;
+}
+body{
+    background-color: #f7f7f7;
+}
+#nav{
+    /* height: 100px; */
+    width:100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-between ;
+    padding: 25px;
+
+}
+
+
+#nav #nav1{
+    /* background-color: red; */
+    height: 82px;
+    overflow: hidden;
+   
+}
+#nav #nav1 svg{
+    /* margin-bottom: 100px; */
+    display: block;
+    
+}
+
+#nav #nav2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#nav2 #links{
+    padding:0 10px ;
+    
+    
+}
+#nav2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight:600;
+    font-size: 12px;
+    margin:0  40px;
+    position: relative;
+    display: inline-block;
+}
+#nav #links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* position slightly below text */
+  width: 0;
+  height: 1px;
+  background-color: #808080;
+  transition: width 0.3s ease-out;
+}
+#nav #links a:hover::after {
+  width: 100%; /* slide to full width on hover */
+}
+
+#nav #links a:hover {
+  color: #808080;
+}
+#icon{
+    padding: 5px 10px;
+    border-radius: 50px;
+    background-color: #f7f7f7;
+  
+
+}
+#nav2 #icon i{
+    font-size: 15px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+
+
+#cursor{
+  height: 200px;
+  width: 200px;
+  background-color: blanchedalmond;
+  position: fixed;
+  border-radius: 50%;
+ pointer-events: none;/* Make sure cursor div doesn’t block pointer */
+  transform: translate(-50%, -50%) scale(0);
+   will-change: transform;
+  top: 0;
+  left: 0; 
+  /* z-index: 999; */
+}
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#page1{
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 0 1vw;
+    /* padding-left: 1px; */
+    padding-top: 30vh;
+    
+
+}
+
+#page1 h1{
+    font-size: 16.5vw;
+    /* font-size: clamp(2rem, 10vw, 15vw); */
+    font-family:'futura';
+    text-transform: uppercase;
+    line-height: 14vw;
+    letter-spacing: -14px;
+    white-space: nowrap;
+}
+
+
+#video-container{
+    height: 100vh;
+    width: 100%;
+    /* background-color: grey; */
+    margin-top: 1vw;
+}
+
+
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+#video-container #play{
+    padding: 2vw 1vw ;
+    background-color: black;
+    color: white;
+    font-size: 1.5vw;
+    position: fixed;
+    text-transform: uppercase;
+    font-family: "futura";
+    border-radius: 50%;
+    /* transform: translate(-100%,-50%); */
+    opacity: 0;
+    scale:0;
+}
+#page1 .pledge h1{
+    text-align: center;  
+    font-size: clamp(1.8rem,calc(2.8vw + 1.5rem),6rem);
+    /* font-size: 3.5vw; */
+    letter-spacing: 0px;
+    /* bottom-li: 0px; */
+    margin-top: 80px;
+    padding-bottom: 0;
+
+    
+}
+#page1 .pledge p{
+    font-family: light;
+    text-align: center;
+    font-size:clamp(.1rem,calc(.1vw+.1rem),.5rem);
+    font-weight:lighter;
+    padding-top: 0px;
+    margin-bottom: 60px;
+    /* margin-top: -60px; */
+
+max-width: 70%;            /* Set how wide the line can be */
+  margin-left: auto;
+  margin-right: auto;
+
+    
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+}
+.dividor{
+    width: 100%;
+    padding: 0px 20px;
+
+}
+.text{
+    display:flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 500;
+    color:#000;
+    margin-bottom: 5px;
+}
+.divider{
+    border: none;
+    height: .2px;
+    background-color: #000;
+    
+}
+#page2{
+    min-height: 100vh;
+    /* height:100vh; */
+    width:100%;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    /* align-items: center; */
+    padding: 3vw 1vw;
+    justify-content: space-between;
+}
+#page2 .elem{
+    /* height:100%; */
+    position: relative;
+    width: 31vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    scale:1.1;
+}
+
+
+#page2 .elem .dets{
+    height: 60px;
+    border-radius: 50px;
+    width: 80%;
+    position: absolute;
+    z-index: 9;
+    background-color: rgb(218,139,172);
+}
+#page2 .elem .dets:hover{
+    height: 200px;
+}
+
+
+
+.text2{
+    position: relative;
+    margin-top:30px ;
+
+}
+.text2 .box{
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items:start; */
+
+    
+}
+.box h1{
+   padding: 0 1.5vw;
+   font-size: clamp(1.8rem,calc(2.1vw + 1.5rem),6rem);
+   font-weight:500;
+   text-transform: uppercase;
+   font-family:'futura';
+   line-height: 3.5vw;
+   letter-spacing: 1px;
+   white-space:wrap ;
+   margin-right: 100px;
+   
+
+}
+.box p{
+   padding-right: 150px;
+   max-width: 60ch; 
+   letter-spacing: 2px;
+    
+    
+  
+    
+
+    
+    
+}
+
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    /* background-color: #f7f7f7; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+.child{
+    height: 54vh;
+    width: 38vw;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.child img{
+    height:100% ;
+}
+@media (max-width: 760px) {
+   
+#nav{
+    /* height: 100px; */
+    width:100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-between ;
+    padding: 15px;
+
+}
+
+
+#nav #nav1{
+    /* background-color: red; */
+    height: 65px;
+    overflow: hidden;
+   
+}
+
+#nav #nav1 svg{
+    /* margin-bottom: 100px; */
+    display: block;
+    height:65px;
+    width: 87px;
+    
+}
+#nav #nav1 #twogoodlogo{
+    height: 40px;
+    margin-left: -20px;
+    
+   
+}
+
+#nav #nav2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;  
+}
+
+
+#links{
+    padding:0 10px ;
+    display: none;
+    
+}
+#nav2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight:600;
+    font-size: 12px;
+    margin:0  40px;
+}
+
+#icon{
+    padding: 5px 10px;
+    border-radius: 50px;
+    background-color: #f7f7f7;
+  
+
+}
+#nav2 #icon i{
+    font-size: 15px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+
+
+
+#page1{
+    min-height: 70vh;
+    width: 100%;
+    padding: 0 4vw;
+    /* padding-left: 1px; */
+    padding-top: 33.5vh; 
+    
+
+}
+
+#page1 h1{
+    
+    font-size: 15.4vw;
+    line-height: 13vw;
+    letter-spacing: -3px;
+    
+}
+#video-container{
+    height: 35vh;
+    margin-top: 4.5vw;
+}
+
+#video-container #play{
+    padding: 7vw 4.2vw ;
+
+    font-size: 4.5vw;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    opacity: 1;
+    scale:1;
+    transform: translate(-50%,-50%);
+}
+
+
+#page2{
+    min-height: 100vh;
+    /* height:100vh; */
+    width:100%;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    /* align-items: center; */
+    padding: 5vw 3vw;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#page2 .elem{
+    height:100vh;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom:3vw ;
+    
+    
+}
+
+
+
+#page2 .elem .dets{
+    height: 40px;
+    border-radius: 50px;
+    width: 80%;
+    position: absolute;
+    z-index: 9;
+    background-color: rgb(218,139,172);
+}
+
+
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    /* background-color: #f7f7f7; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+.child{
+    height: 54vh;
+    width: 88vw;
+    /* background-color: red; */
+    position: relative;
+    padding: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.child img{
+    height:100% ;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
