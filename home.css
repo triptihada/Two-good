@@ -264,50 +264,99 @@ max-width: 70%;            /* Set how wide the line can be */
 
 
 #page2 .elem .dets{
-    height: 60px;
+   height: 50px;
     border-radius: 50px;
-    min-width: 20vw;
+    width: 80%;
     position: absolute;
+    /* position: relative; */
     z-index: 9;
-    background-color: rgb(218,139,172);
-    cursor: pointer;
-    height: 6vh;
-    font-size: 1rem;
-    text-transform: uppercase;
-     text-align: center;
-}
-.dets h4{
+    background-color: #d3b5a1;
     display: inline-block;
-    padding: 10px 10px;
-    margin: 0 20px;
+    
+}
+
+.dropdown-header{
+  font-size: .8rem;
+  background: #d3b5a1;
+  padding: 0.8rem 1.2rem;
+  border-radius: 2rem;
+  display: flex;
+  /* align-items:center; */
+  justify-content: center;
+  gap: 2rem;
+  cursor: pointer;
+  /* text-align: center; */
+  
+}
+.dot {
+  height: 8px;
+  width: 8px;
+  background: black;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+.dropdown-header a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  margin-top: 5px;
+}
+.dropdown-header a.active {
+  font-weight: bold;
+}
+
+.dets .dropdown-content {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f0e2d5;
+  padding: 1.2rem;
+  display: none;
+  border-radius: 1.5rem;
+  margin-top: 0.4rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+ transition: opacity 0.3s ease-in-out,visibility 0.3s ease;
+ visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;          
+  gap: 2rem;              
+ justify-content: center; 
+  cursor: pointer;
+}
+.dropdown-content .item {
+  text-align: center;
+  flex-direction: column;
+  align-items: center; 
+  width: 150px; 
+  height:200px;
+  margin-bottom: 1.5rem;
+}
+.dropdown-content img{
+  width: 100px;
+     /* crop if needed */
  
 }
-.dets .shop{
-    font-weight: 500;
+.dropdown-content #k img{
+  height: 145px;
+  margin-top: 55px;
 }
-
-.dets .dropdown a{
-    
-    display:inline-block;
-    text-decoration: none;
-    color: #000;
-    padding: 10px 15px;
-    font-size: 12px;    
+.dropdown-content #kk img{
+  height: 190px;
+  margin-top: 18px;
+  
 }
-
-.dets .dropdown{
-    display:none;
-    position: absolute;
-    background-color:rgb(240, 190, 210) ;
-    min-width: 20vw;
-    min-height: 10vh; 
-     /* border-radius: 50px; */
-    transition: opacity 0.3s ease; 
-    /* border-radius: 50px; */
- } 
-.dets:hover .dropdown {
-    display: block;
-
+.dropdown-content p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  
+}
+.dets:hover .dropdown-content,.dropdown-content:hover{
+  display: flex; /* ensure flex applies when shown */
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 .text2{
